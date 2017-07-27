@@ -4,22 +4,10 @@ import com.typesafe.config.*;
 import java.io.File;
 import java.util.Map;
 import java.util.Set;
-import java.util.Collections;
-import java.util.List;
-import java.util.Collection;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.LinkedHashMap;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.TreeMap;
 import java.util.Iterator;
 
-/**
- * Hello world!
- *
- */
-public class Main 
+public class Main
 {
     public static void main( String[] args )
     {
@@ -46,11 +34,6 @@ public class Main
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry)it.next();
             System.out.println(pair.getKey() + " = " + pair.getValue());
-            it.remove(); // avoids a ConcurrentModificationException
-        }
-        //conf.checkValid(ConfigFactory.defaultReference());
-
-       // System.out.println(conf.root().render(options));
-
+            it.remove();        }
     }
 }
